@@ -68,3 +68,39 @@ ORDER BY P.Elevation DESC
 GO
 
 SELECT * FROM v_HighestPeak 
+
+USE SoftUni
+
+SELECT * FROM Projects
+
+INSERT INTO Projects (Name, StartDate)
+     SELECT Name + ' Restructuring', GETDATE()
+       FROM Departments
+
+SELECT [Name], StartDate, EndDate
+  INTO ProjectsTable
+  FROM Projects
+
+CREATE SEQUENCE seq_Customers_CustomerID AS INT
+START WITH 1
+INCREMENT BY 2
+
+SELECT NEXT VALUE FOR seq_Customers_CustomerID
+
+DELETE FROM Employees 
+WHERE EmployeeID = 1
+
+SELECT * FROM Employees
+WHERE LastName = 'Brown'
+
+UPDATE Employees
+SET LastName = 'Brown'
+WHERE EmployeeID = 1
+
+UPDATE Projects
+SET EndDate = '2017-01-23'
+WHERE EndDate IS NULL
+
+UPDATE Projects
+SET [Description] = 'There is no description!'
+WHERE [Description] IS NULL

@@ -1,9 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SqlWorkbenchSqlProject">
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Data Definition and Data Types - Lab">
   <Items>
-    <LogicalFolder Name="Connections" Type="2" />
-    <LogicalFolder Name="Queries" Type="0" />
-    <LogicalFolder Name="Miscellaneous" Type="3" />
-
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="MIROSLAV-STOYAN\SQLEXPRESS:MIROSLAV-STOYAN\User">
+          <Created>2018-05-29T17:53:58.8610177+03:00</Created>
+          <Type>SQL</Type>
+          <Server>MIROSLAV-STOYAN\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="01. Create a Database.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01. Create a Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. Create Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. Create Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03. Insert Sample Data into Database.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03. Insert Sample Data into Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04. Create a Function.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04. Create a Function.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05. Create Procedures.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05. Create Procedures.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06. Create Transactions Table and a Trigger.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>06. Create Transactions Table and a Trigger.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
   </Items>
 </SqlWorkbenchSqlProject>

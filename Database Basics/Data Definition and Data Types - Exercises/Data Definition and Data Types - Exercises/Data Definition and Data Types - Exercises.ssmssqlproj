@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Data Definition and Data Types - Exercises">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="MIROSLAV-STOYAN\SQLEXPRESS:MIROSLAV-STOYAN\User">
+          <Created>2018-05-29T17:18:44.245995+03:00</Created>
+          <Type>SQL</Type>
+          <Server>MIROSLAV-STOYAN\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="01. Create Database.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01. Create Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. Create Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. Create Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03. Alter Minions Table.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>03. Alter Minions Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04. Insert Records in Both Tables.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>04. Insert Records in Both Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05. Truncate Table Minions.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>05. Truncate Table Minions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06. Drop All Tables.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>06. Drop All Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07. Create Table People.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>07. Create Table People.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08. Create Table Users.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>08. Create Table Users.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09. Change Primary Key.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>09. Change Primary Key.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10. Add Check Constraint.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>10. Add Check Constraint.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11. Set Default Value of a Field.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>11. Set Default Value of a Field.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12. Set Unique Field.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>12. Set Unique Field.sql</FullPath>
+        </FileNode>
+        <FileNode Name="13. Movies Database.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>13. Movies Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="14. Car Rental Database.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>14. Car Rental Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="15. Hotel Database.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>15. Hotel Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="16. Create SoftUni Database.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>16. Create SoftUni Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="17. Backup Database.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>17. Backup Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="18. Basic Insert.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>18. Basic Insert.sql</FullPath>
+        </FileNode>
+        <FileNode Name="19. Basic Select All Fields.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>19. Basic Select All Fields.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20. Basic Select All Fields and Order Them.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>20. Basic Select All Fields and Order Them.sql</FullPath>
+        </FileNode>
+        <FileNode Name="21. Basic Select Some Fields.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>21. Basic Select Some Fields.sql</FullPath>
+        </FileNode>
+        <FileNode Name="22. Increase Employees Salary.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>22. Increase Employees Salary.sql</FullPath>
+        </FileNode>
+        <FileNode Name="23. Decrease Tax Rate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>23. Decrease Tax Rate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="24. Delete All Records.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>24. Delete All Records.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

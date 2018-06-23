@@ -8,7 +8,7 @@ CREATE TABLE Persons(
  PersonID   INT,
  FirstName  NVARCHAR(15),
  Salary     DECIMAL(15, 2),
- PassportID INT,
+ PassportID INT UNIQUE,
  CONSTRAINT FK_PassportID_Passports FOREIGN KEY(PassportID) REFERENCES Passports(PassportID),
  CONSTRAINT PK_PersonID PRIMARY KEY(PersonID)
 )

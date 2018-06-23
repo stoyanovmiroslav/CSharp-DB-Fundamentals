@@ -1,0 +1,22 @@
+CREATE TABLE Users(
+Id BIGINT PRIMARY KEY IDENTITY,
+Username VARCHAR(30) NOT NULL,
+Password VARCHAR(26) NOT NULL,
+ProfilePicture VARBINARY(MAX),
+LastLongTime DATETIME2,
+IsDeleted BIT
+)
+
+INSERT INTO Users VALUES
+('miroslav', '132123', NULL, DEFAULT, 1),
+('gosho', '1221313', NULL, '1997-11-23', 0),
+('petar', '1312323', NULL, '1988-10-20', 0),
+('rosen', '1243243', NULL, '1977-01-18', 0),
+('iveta', '1254353', NULL, '1989-06-17', 0)
+
+ALTER TABLE Users
+ADD CONSTRAINT CHK_ProfilePicture CHECK(DATALENGTH(ProfilePicture) <= 900 * 1024)
+
+SELECT * FROM Users
+
+TRUNCATE TABLE Users

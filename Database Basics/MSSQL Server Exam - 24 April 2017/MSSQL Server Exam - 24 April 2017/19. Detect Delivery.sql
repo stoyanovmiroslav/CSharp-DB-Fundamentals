@@ -9,6 +9,9 @@ AS
    ON o.OrderId = op.OrderId
    JOIN inserted AS i
    ON i.OrderId = o.OrderId
+   JOIN deleted AS d
+   ON d.OrderId = i.OrderId
+   WHERE d.Delivered != i.Delivered
 
 
 UPDATE Orders

@@ -139,11 +139,11 @@
           <AssociatedConnUserName />
           <FullPath>19. Detect Delivery.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1.sql">
+        <FileNode Name="20. Vendor Preference.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:MIROSLAV-STOYAN\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>MIROSLAV-STOYAN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
+          <FullPath>20. Vendor Preference.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

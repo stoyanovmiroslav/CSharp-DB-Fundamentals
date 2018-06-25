@@ -1,3 +1,2 @@
 DELETE AccountsTrips
-WHERE AccountId = 47
-
+ WHERE AccountId = 47

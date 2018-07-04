@@ -1,6 +1,5 @@
 USE TripService
 GO
-
 -- Disable referential integrity
 EXEC sp_MSForEachTable 'DISABLE TRIGGER ALL ON ?'
 GO

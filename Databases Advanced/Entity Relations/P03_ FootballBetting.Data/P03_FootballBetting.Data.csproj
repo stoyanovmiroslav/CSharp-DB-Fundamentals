@@ -1,18 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.entityframeworkcore" Version="2.1.1" />
     <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.1.1" />
     <PackageReference Include="microsoft.entityframeworkcore.tools" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\P03_ FootballBetting.Data\P03_FootballBetting.Data.csproj" />
+    <ProjectReference Include="..\P03_ FootballBetting.Data.Models\P03_FootballBetting.Data.Models.csproj" />
   </ItemGroup>
 
 </Project>

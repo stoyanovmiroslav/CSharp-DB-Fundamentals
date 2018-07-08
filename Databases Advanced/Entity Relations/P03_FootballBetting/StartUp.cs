@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P03_FootballBetting.Data;
+using System;
 
 namespace P03_FootballBetting
 {
@@ -6,7 +7,10 @@ namespace P03_FootballBetting
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (FootballBettingContext contex = new FootballBettingContext())
+            {
+                contex.Database.EnsureDeleted();
+            }
         }
     }
 }

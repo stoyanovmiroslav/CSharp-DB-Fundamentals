@@ -5,9 +5,13 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_StudentSystem", "P01_StudentSystem\P01_StudentSystem.csproj", "{9FB25F91-A35B-4088-A7A9-7DC497BE5A30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_SeedSomeData", "P02_SeedSomeData\P02_SeedSomeData.csproj", "{F01396AA-044D-4877-BBD2-EB74E05BC0E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_SeedSomeData", "P02_SeedSomeData\P02_SeedSomeData.csproj", "{F01396AA-044D-4877-BBD2-EB74E05BC0E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_FootballBetting", "P03_FootballBetting\P03_FootballBetting.csproj", "{6E9CCE1B-8313-44F0-B467-8516072B0476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_FootballBetting", "P03_FootballBetting\P03_FootballBetting.csproj", "{6E9CCE1B-8313-44F0-B467-8516072B0476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_FootballBetting.Data", "P03_ FootballBetting.Data\P03_FootballBetting.Data.csproj", "{1BB164F1-8BA8-4B0D-BA83-A315F1AEDDA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_FootballBetting.Data.Models", "P03_ FootballBetting.Data.Models\P03_FootballBetting.Data.Models.csproj", "{44821776-5F7A-441C-A4C2-9066C33E8AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{6E9CCE1B-8313-44F0-B467-8516072B0476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E9CCE1B-8313-44F0-B467-8516072B0476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E9CCE1B-8313-44F0-B467-8516072B0476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB164F1-8BA8-4B0D-BA83-A315F1AEDDA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB164F1-8BA8-4B0D-BA83-A315F1AEDDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB164F1-8BA8-4B0D-BA83-A315F1AEDDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB164F1-8BA8-4B0D-BA83-A315F1AEDDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44821776-5F7A-441C-A4C2-9066C33E8AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44821776-5F7A-441C-A4C2-9066C33E8AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44821776-5F7A-441C-A4C2-9066C33E8AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44821776-5F7A-441C-A4C2-9066C33E8AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,7 +12,7 @@ namespace P01_BillsPaymentSystem.Data.Models
         {
             this.ExpirationDate = expirationDate;
             this.MoneyOwed = moneyOwed;
-            this.Limit = Limit;
+            this.Limit = limit;
         }
 
         [Key]

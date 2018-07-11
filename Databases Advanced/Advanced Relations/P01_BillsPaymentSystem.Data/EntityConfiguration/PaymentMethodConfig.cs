@@ -11,6 +11,8 @@ namespace P01_BillsPaymentSystem.Data.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<PaymentMethod> builder)
         {
+            builder.HasIndex(e => new { e.BankAccountId, e.CreditCardId, e.UserId }).IsUnique();
+
             builder.HasOne(e => e.CreditCard)
                    .WithOne(e => e.PaymentMethod)
                    .HasForeignKey<PaymentMethod>(e => e.CreditCardId);

@@ -6,6 +6,6 @@ namespace P01_BillsPaymentSystem.Data
 {
     class Configuration
     {
-        public const string ConnectionString = "Server=.;Database=Bills Payment System;Trusted_Connection=True;";
+        public const string ConnectionString = "Server=.;Database=SoftUni;Trusted_Connection=True;";
     }
 }

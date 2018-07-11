@@ -22,7 +22,5 @@ namespace P01_BillsPaymentSystem.Data.Models
 
         public CreditCard CreditCard { get; set; }
         public int? CreditCardId { get; set; }
-
-        //always one of them is null and the other one is not (add a CHECK constraint)
     }
 }

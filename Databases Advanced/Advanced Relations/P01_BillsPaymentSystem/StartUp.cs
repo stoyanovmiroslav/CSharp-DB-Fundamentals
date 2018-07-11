@@ -2,6 +2,7 @@
 using P01_BillsPaymentSystem.Data;
 using P01_BillsPaymentSystem.Data.Models;
 using System;
+using System.Globalization;
 using System.Linq;
 
 namespace P01_BillsPaymentSystem
@@ -13,13 +14,13 @@ namespace P01_BillsPaymentSystem
             using (BillsPaymentSystemContext context = new BillsPaymentSystemContext())
             {
                 context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                context.Database.Migrate();
 
                 Seed(context);
 
                 Console.Write("Enter UserId: ");
                 int userId = int.Parse(Console.ReadLine());
-                Console.Write("Ënter BillsAmount: ");
+                Console.Write("Enter BillsAmount: ");
                 decimal amount = decimal.Parse(Console.ReadLine());
 
                 PayBills(userId, amount, context);
@@ -140,7 +141,7 @@ namespace P01_BillsPaymentSystem
                 Console.WriteLine($"--- Limit: {c.CreditCard.Limit}");
                 Console.WriteLine($"--- Money Owed: {c.CreditCard.MoneyOwed}");
                 Console.WriteLine($"--- Limit Left: {c.CreditCard.LimitLeft}");
-                Console.WriteLine($"--- Expiration Date: {c.CreditCard.ExpirationDate}");
+                Console.WriteLine($"--- Expiration Date: {c.CreditCard.ExpirationDate.ToString("yyyy/MM", CultureInfo.InvariantCulture)}");
             }
 
             bool areThereAnyCreditCards = user.CreditCards.Any(x => x.CreditCard != null);

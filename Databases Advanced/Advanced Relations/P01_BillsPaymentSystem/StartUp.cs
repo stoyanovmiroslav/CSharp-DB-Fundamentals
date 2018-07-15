@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using P01_BillsPaymentSystem.Data;
 using P01_BillsPaymentSystem.Data.Models;
+using P01_BillsPaymentSystem.Data.Models.Views;
 using System;
 using System.Globalization;
 using System.Linq;
@@ -20,11 +21,40 @@ namespace P01_BillsPaymentSystem
 
                 Console.Write("Enter UserId: ");
                 int userId = int.Parse(Console.ReadLine());
+
                 Console.Write("Enter BillsAmount: ");
                 decimal amount = decimal.Parse(Console.ReadLine());
 
-                PayBills(userId, amount, context);
+                Console.WriteLine("{0}{1}User statement before paymet:{1}{0}", new string('-', 30), Environment.NewLine);
                 PrintUserStatement(context, userId);
+
+                PayBills(userId, amount, context);
+
+                Console.WriteLine("{0}{1}User statement after paymet:{1}{0}", new string('-', 30), Environment.NewLine);
+                PrintUserStatement(context, userId);
+            }
+        }
+
+        private static void PrintUserStatement(BillsPaymentSystemContext context, int userId)
+        {
+            var user = context.Users
+                              .Where(u => u.UserId == userId)
+                              .Select(x => new UserStatement
+                              {
+                                  FirstName = x.FirstName,
+                                  LastName = x.LastName,
+                                  BankAccounts = x.PaymentMethods.Select(p => p.BankAccount).ToList(),
+                                  CreditCards = x.PaymentMethods.Select(p => p.CreditCard).ToList()
+                              }).FirstOrDefault();
+
+            if (user == null)
+            {
+                Console.WriteLine($"User with id {userId} not found!");
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine(user);
             }
         }
 
@@ -90,65 +120,14 @@ namespace P01_BillsPaymentSystem
                 {
                     transaction.Commit();
                     context.SaveChanges();
+                    Console.WriteLine("{0}{1}Successful payment!", new string('-', 30), Environment.NewLine);
                 }
                 else
                 {
                     transaction.Rollback();
+                    Console.WriteLine("{0}{1}Not enough funds!{1}{0}", new string('-', 30), Environment.NewLine);
+                    Environment.Exit(0);
                 }
-            }
-        }
-
-        private static void PrintUserStatement(BillsPaymentSystemContext context, int userId)
-        {
-            var user = context.Users
-                              .Where(u => u.UserId == userId)
-                              .Select(x => new
-                              {
-                                  x.FirstName,
-                                  x.LastName,
-                                  BankAccounts = x.PaymentMethods.Select(p => new { p.BankAccount }).ToList(),
-                                  CreditCards = x.PaymentMethods.Select(p => new { p.CreditCard }).ToList()
-                              }).FirstOrDefault();
-
-            if (user == null)
-            {
-                Console.WriteLine($"User with id {userId} not found!");
-                Environment.Exit(0);
-            }
-
-            Console.WriteLine($"User: {user.FirstName} {user.LastName}");
-
-            Console.WriteLine("Bank Accounts:");
-            foreach (var b in user.BankAccounts.Where(x => x.BankAccount != null))
-            {
-                Console.WriteLine($"-- ID: {b.BankAccount.BankAccountId}");
-                Console.WriteLine($"--- Balance: {b.BankAccount.Balance}");
-                Console.WriteLine($"--- Bank: {b.BankAccount.BankName}");
-                Console.WriteLine($"--- SWIFT: {b.BankAccount.SwiftCode}");
-            }
-
-            bool areThereAnyBankAccounts = user.BankAccounts.Any(x => x.BankAccount != null);
-
-            if (!areThereAnyBankAccounts)
-            {
-                Console.WriteLine("No any bank accounts");
-            }
-
-            Console.WriteLine("Credit Cards:");
-            foreach (var c in user.CreditCards.Where(x => x.CreditCard != null))
-            {
-                Console.WriteLine($"-- ID: {c.CreditCard.CreditCardId}");
-                Console.WriteLine($"--- Limit: {c.CreditCard.Limit}");
-                Console.WriteLine($"--- Money Owed: {c.CreditCard.MoneyOwed}");
-                Console.WriteLine($"--- Limit Left: {c.CreditCard.LimitLeft}");
-                Console.WriteLine($"--- Expiration Date: {c.CreditCard.ExpirationDate.ToString("yyyy/MM", CultureInfo.InvariantCulture)}");
-            }
-
-            bool areThereAnyCreditCards = user.CreditCards.Any(x => x.CreditCard != null);
-
-            if (!areThereAnyCreditCards)
-            {
-                Console.WriteLine("No any credit cards");
             }
         }
 
@@ -182,7 +161,7 @@ namespace P01_BillsPaymentSystem
                 new PaymentMethod { User = users[3], BankAccount = bankAccounts[1], Type = Data.Models.Type.BankAccount },
                 new PaymentMethod { User = users[3], BankAccount = bankAccounts[2], Type = Data.Models.Type.BankAccount },
                 new PaymentMethod { User = users[2], BankAccount = bankAccounts[0], Type = Data.Models.Type.BankAccount },
-                new PaymentMethod { User = users[1], CreditCard = creditCards[1], Type = Data.Models.Type.BankAccount }
+                new PaymentMethod { User = users[1], CreditCard = creditCards[1], Type = Data.Models.Type.CreditCard }
             };
 
             context.Users.AddRange(users);

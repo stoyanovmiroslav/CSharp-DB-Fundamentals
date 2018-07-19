@@ -22,7 +22,6 @@ namespace BookShop
         public static string GetMostRecentBooks(BookShopContext context)
         {
             var mostRecentBooks = context.Categories
-                                    .Include(x => x.CategoryBooks)
                                     .Select(x => new
                                     {
                                         x.Name,

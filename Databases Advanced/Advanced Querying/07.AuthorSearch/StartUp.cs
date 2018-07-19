@@ -23,12 +23,11 @@ namespace BookShop
         {
 
             var authors = context.Authors
+                                 .Where(x => x.FirstName.EndsWith(input))
                                  .Select(x => new
                                  {
-                                     x.FirstName,
                                      FullName = x.FirstName + " " + x.LastName
                                  })
-                                 .Where(x => x.FirstName.EndsWith(input))
                                  .OrderBy(x => x.FullName).ToList();
 
             return string.Join(Environment.NewLine, authors.Select(x => x.FullName));

@@ -2,6 +2,6 @@
 {
     internal class Configuration
     {
-        internal static string ConnectionString => "Server=.;Database=BookShop;Trusted_Connection=True;";
+        internal static string ConnectionString => "Server=.;Database=SoftUni;Trusted_Connection=True;";
     }
 }

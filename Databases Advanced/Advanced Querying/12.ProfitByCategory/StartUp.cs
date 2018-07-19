@@ -22,7 +22,6 @@ namespace BookShop
         public static string GetTotalProfitByCategory(BookShopContext context)
         {
             var totalProfitByCategory = context.Categories
-                                               .Include(x => x.CategoryBooks)
                                                .Select(x => new
                                                {
                                                    x.Name,

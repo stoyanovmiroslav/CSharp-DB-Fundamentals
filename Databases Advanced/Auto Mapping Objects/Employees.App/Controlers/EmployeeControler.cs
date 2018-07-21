@@ -63,11 +63,11 @@ namespace Employees.App.Controlers
             context.SaveChanges();
         }
 
-        public List<EmployeeDto> GetEmployeesOlderThan(int age)
+        public List<EmployeeManagerDto> GetEmployeesOlderThan(int age)
         {
             var employeeDto = context.Employees
                                 .Where(e => e.Birthday != null && e.Birthday.Value.Year + age < DateTime.Now.Year)
-                                .ProjectTo<EmployeeDto>().ToList();
+                                .ProjectTo<EmployeeManagerDto>().ToList();
             
             return employeeDto;
         }

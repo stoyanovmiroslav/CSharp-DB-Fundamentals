@@ -18,6 +18,6 @@ namespace Employees.App.Contracts
 
         EmployeePersonalInfoDto GetEmployeePersonalInfo(int employeeId);
 
-        List<EmployeeDto> GetEmployeesOlderThan(int age);
+        List<EmployeeManagerDto> GetEmployeesOlderThan(int age);
     }
 }

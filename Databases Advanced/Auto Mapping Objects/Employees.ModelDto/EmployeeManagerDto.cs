@@ -1,18 +1,17 @@
-﻿using Employees.ModelDto;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Employees.App.Models
+namespace Employees.ModelDto
 {
-    public class EmployeeDto
+    public class EmployeeManagerDto
     {
-        public int Id { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
 
         public decimal Salary { get; set; }
-    }
+
+        public string ManagerLastName { get; set; }
+    } 
 }

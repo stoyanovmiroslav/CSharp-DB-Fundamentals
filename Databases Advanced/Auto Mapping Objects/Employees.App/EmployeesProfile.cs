@@ -9,11 +9,13 @@ namespace Employees.App
     {
         public EmployeesProfile()
         {
-            CreateMap<Employee, EmployeeDto>().ForMember(dest => dest.Manager, from => from.MapFrom(x => x.Manager)).ReverseMap();
+            CreateMap<Employee, EmployeeDto>().ReverseMap();
 
             CreateMap<Employee, EmployeePersonalInfoDto>().ReverseMap();
 
             CreateMap<Employee, ManagerDto>().ForMember(dest => dest.EmployeesDto, from => from.MapFrom(x => x.Employees)).ReverseMap();
+
+            CreateMap<Employee, EmployeeManagerDto>().ForMember(dest => dest.ManagerLastName, from => from.MapFrom(x => x.Manager.LastName)).ReverseMap();
         }
     }
 }

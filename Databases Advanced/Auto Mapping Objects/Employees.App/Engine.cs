@@ -9,12 +9,13 @@ using Employees.Models;
 using Employees.Services;
 using Employees.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Employees.App
 {
     public class Engine : IEngine
     {
-        private IServiceProvider serviceProvider;
+        private readonly IServiceProvider serviceProvider;
 
         public Engine(IServiceProvider serviceProvider)
         {
@@ -23,11 +24,11 @@ namespace Employees.App
 
         public void Run()
         {
-            var dbInitializerService = (IDbInitializerService)serviceProvider.GetService(typeof(IDbInitializerService));
+            var dbInitializerService = serviceProvider.GetService<IDbInitializerService>();
             dbInitializerService.Initializer();
             dbInitializerService.Seed();
 
-            var commandInterpreter = (ICommandInterpreter)serviceProvider.GetService(typeof(ICommandInterpreter));
+            var commandInterpreter = serviceProvider.GetService<ICommandInterpreter>();
             
             
             string input = "";

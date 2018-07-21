@@ -6,23 +6,30 @@ using Employees.App.Contracts;
 using Employees.App.Models;
 using Employees.Data;
 using Employees.Models;
+using Employees.Services;
+using Employees.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace Employees.App
 {
-    public class Engine
+    public class Engine : IEngine
     {
         private IServiceProvider serviceProvider;
-        private ICommandInterpreter commandInterpreter;
 
-        public Engine(IServiceProvider serviceProvider, ICommandInterpreter commandInterpreter)
+        public Engine(IServiceProvider serviceProvider)
         {
             this.serviceProvider = serviceProvider;
-            this.commandInterpreter = commandInterpreter;
         }
 
         public void Run()
         {
+            var dbInitializerService = (IDbInitializerService)serviceProvider.GetService(typeof(IDbInitializerService));
+            dbInitializerService.Initializer();
+            dbInitializerService.Seed();
+
+            var commandInterpreter = (ICommandInterpreter)serviceProvider.GetService(typeof(ICommandInterpreter));
+            
+            
             string input = "";
 
             while ((input = Console.ReadLine()) != "Stop")

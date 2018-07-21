@@ -24,7 +24,7 @@ namespace Employees.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseLazyLoadingProxies();
+                optionsBuilder.UseLazyLoadingProxies(true);
                 optionsBuilder.UseSqlServer(Configuration.ConnectionString);
             }
         }

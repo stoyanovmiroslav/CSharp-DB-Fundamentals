@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Employees.Services.Contracts;
+using Employees.App.Contracts;
 
 namespace Employees.App.Commands
 {
     class SetManagerCommand : Command
     {
-        public SetManagerCommand(IEmployeeService employeeService) 
-            : base(employeeService)
+        public SetManagerCommand(IManagerControler managerControler) 
+            : base(managerControler)
         {
         }
 
         public override string Execute(List<string> arguments)
         {
-            string result = this.employeeService.SetManager(arguments);
-            return result;
+            int employeeId = int.Parse(arguments[0]);
+            int managerId = int.Parse(arguments[1]);
+
+            this.managerControler.SetManager(employeeId, managerId);
+            return "Manager changed successfully!";
         }
     }
 }

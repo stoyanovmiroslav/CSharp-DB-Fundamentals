@@ -7,14 +7,9 @@ namespace Employees.App.Commands
 {
     public class ExitCommand : Command
     {
-        public ExitCommand(IEmployeeService employeeService) 
-            : base(employeeService)
-        {
-        }
-
         public override string Execute(List<string> arguments)
         {
-            this.employeeService.Exit();
+            Environment.Exit(0);
             return string.Empty;
         }
     }

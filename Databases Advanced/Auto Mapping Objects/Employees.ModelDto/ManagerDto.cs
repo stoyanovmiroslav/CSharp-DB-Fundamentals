@@ -11,6 +11,6 @@ namespace Employees.ModelDto
 
         public string LastName { get; set; }
 
-        public ICollection<EmployeeDto> Employees { get; set; }
+        public ICollection<EmployeeDto> EmployeesDto { get; set; }
     }
 }

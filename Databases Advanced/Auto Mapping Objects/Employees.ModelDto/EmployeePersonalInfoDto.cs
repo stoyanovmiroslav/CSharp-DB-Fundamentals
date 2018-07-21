@@ -1,11 +1,10 @@
-﻿using Employees.ModelDto;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Employees.App.Models
+namespace Employees.ModelDto
 {
-    public class EmployeeDto
+    public class EmployeePersonalInfoDto
     {
         public int Id { get; set; }
 
@@ -15,6 +14,8 @@ namespace Employees.App.Models
 
         public decimal Salary { get; set; }
 
-        public ManagerDto Manager { get; set; }
+        public DateTime? Birthday { get; set; }
+
+        public string Address { get; set; }
     }
 }

@@ -26,9 +26,7 @@ namespace Employees.App
 
             var services = parameters.Select(serviceProvider.GetService).ToArray();
 
-            object[] ctorArgs = new object[] { services };
-
-           return (ICommand)constructor.Invoke(services);
+            return (ICommand)constructor.Invoke(services);
         }
     }
 }

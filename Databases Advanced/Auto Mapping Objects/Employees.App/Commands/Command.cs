@@ -8,12 +8,24 @@ namespace Employees.App.Commands
 {
     public abstract class Command : ICommand
     {
-        protected IEmployeeService employeeService;
+        protected IEmployeeControler employeeService;
+        protected IManagerControler managerControler;
 
-        protected Command(IEmployeeService employeeService)
+        public Command()
+        {
+        }
+
+        protected Command(IEmployeeControler employeeService)
         {
             this.employeeService = employeeService;
         }
+
+        public Command(IManagerControler managerControler)
+        {
+            this.managerControler = managerControler;
+        }
+
+    
 
 
         public abstract string Execute(List<string> arguments);

@@ -8,19 +8,19 @@ namespace Employees.App.Commands
 {
     public abstract class Command : ICommand
     {
-        protected IEmployeeControler employeeService;
-        protected IManagerControler managerControler;
+        protected IEmployeeService employeeService;
+        protected IManagerService managerControler;
 
         public Command()
         {
         }
 
-        protected Command(IEmployeeControler employeeService)
+        protected Command(IEmployeeService employeeService)
         {
             this.employeeService = employeeService;
         }
 
-        public Command(IManagerControler managerControler)
+        public Command(IManagerService managerControler)
         {
             this.managerControler = managerControler;
         }

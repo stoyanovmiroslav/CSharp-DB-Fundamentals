@@ -9,7 +9,7 @@ namespace Employees.App.Commands
 {
     public class EmployeeInfoCommand : Command
     {
-        public EmployeeInfoCommand(IEmployeeControler employeeService) 
+        public EmployeeInfoCommand(IEmployeeService employeeService) 
             : base(employeeService)
         {
         }

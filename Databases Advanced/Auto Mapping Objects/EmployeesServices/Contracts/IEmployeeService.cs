@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Employees.App.Contracts
+namespace Employees.Services.Contracts
 {
-    public interface IEmployeeControler
+    public interface IEmployeeService
     {
         void AddEmployee(EmployeeDto employeeDto);
 

@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Employees.App.Contracts;
 using Employees.App.Models;
 using Employees.Data;
 using Employees.ModelDto;
 using Employees.Models;
+using Employees.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,13 +12,13 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace Employees.App.Controlers
+namespace Employees.Services
 {
-    public class EmployeeControler : IEmployeeControler
+    public class EmployeeService : IEmployeeService
     {
         EmployeesContext context;
         
-        public EmployeeControler(EmployeesContext context)
+        public EmployeeService(EmployeesContext context)
         {
             this.context = context;
         }

@@ -1,20 +1,20 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Employees.App.Contracts;
 using Employees.Data;
 using Employees.ModelDto;
+using Employees.Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Employees.App.Controlers
+namespace Employees.Services
 {
-    public class ManagerControler : IManagerControler
+    public class ManagerService : IManagerService
     {
         EmployeesContext context;
 
-        public ManagerControler(EmployeesContext context)
+        public ManagerService(EmployeesContext context)
         {
             this.context = context;
         }

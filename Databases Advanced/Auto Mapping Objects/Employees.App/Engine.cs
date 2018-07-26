@@ -4,7 +4,6 @@ using System.Linq;
 using AutoMapper;
 using Employees.App.Contracts;
 using Employees.App.Models;
-using Employees.Data;
 using Employees.Models;
 using Employees.Services;
 using Employees.Services.Contracts;

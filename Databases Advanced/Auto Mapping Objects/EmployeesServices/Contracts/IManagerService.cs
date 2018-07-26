@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Employees.App.Contracts
+namespace Employees.Services.Contracts
 {
-    public interface IManagerControler
+    public interface IManagerService
     {
         void SetManager(int employeeId, int managerId);
 

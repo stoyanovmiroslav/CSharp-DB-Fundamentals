@@ -5,13 +5,13 @@ using System.Text;
 using Employees.App.Contracts;
 using Employees.App.Models;
 using Employees.ModelDto;
-
+using Employees.Services.Contracts;
 
 namespace Employees.App.Commands
 {
     public class EmployeePersonalInfoCommand : Command
     {
-        public EmployeePersonalInfoCommand(IEmployeeControler employeeService)
+        public EmployeePersonalInfoCommand(IEmployeeService employeeService)
             : base(employeeService)
         {
         }

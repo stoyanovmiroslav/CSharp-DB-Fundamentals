@@ -9,7 +9,7 @@ namespace Employees.App.Commands
 {
     public class SetBirthdayCommand : Command
     {
-        public SetBirthdayCommand(IEmployeeControler employeeService)
+        public SetBirthdayCommand(IEmployeeService employeeService)
             : base(employeeService)
         {
         }

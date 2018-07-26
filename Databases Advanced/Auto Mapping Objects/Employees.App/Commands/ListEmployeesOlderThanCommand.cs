@@ -4,12 +4,13 @@ using System.Text;
 using Employees.App.Contracts;
 using Employees.App.Models;
 using Employees.ModelDto;
+using Employees.Services.Contracts;
 
 namespace Employees.App.Commands
 {
     public class ListEmployeesOlderThanCommand : Command
     {
-        public ListEmployeesOlderThanCommand(IEmployeeControler employeeService) 
+        public ListEmployeesOlderThanCommand(IEmployeeService employeeService) 
             : base(employeeService)
         {
         }

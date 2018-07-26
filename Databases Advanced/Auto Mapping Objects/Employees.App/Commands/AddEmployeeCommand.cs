@@ -12,7 +12,7 @@ namespace Employees.App.Commands
 {
     public class AddEmployeeCommand : Command
     {
-        public AddEmployeeCommand(IEmployeeControler employeeService) 
+        public AddEmployeeCommand(IEmployeeService employeeService) 
             : base(employeeService)
         {
         }

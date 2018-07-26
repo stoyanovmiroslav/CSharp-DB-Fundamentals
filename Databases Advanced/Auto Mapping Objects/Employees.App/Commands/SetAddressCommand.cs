@@ -2,12 +2,13 @@
 using Employees.App.Contracts;
 using System.Collections.Generic;
 using System.Text;
+using Employees.Services.Contracts;
 
 namespace Employees.App.Commands
 {
     public class SetAddressCommand : Command
     {
-        public SetAddressCommand(IEmployeeControler employeeService) 
+        public SetAddressCommand(IEmployeeService employeeService) 
             : base(employeeService)
         {
         }

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using Employees.ModelDto;
 using Employees.App.Contracts;
+using Employees.Services.Contracts;
 
 namespace Employees.App.Commands
 {
     public class ManagerInfoCommand : Command
     {
-        public ManagerInfoCommand(IManagerControler managerControler)
+        public ManagerInfoCommand(IManagerService managerControler)
            : base(managerControler)
         {
         }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using Employees.App.Contracts;
+using Employees.Services.Contracts;
 
 namespace Employees.App.Commands
 {
     class SetManagerCommand : Command
     {
-        public SetManagerCommand(IManagerControler managerControler) 
+        public SetManagerCommand(IManagerService managerControler) 
             : base(managerControler)
         {
         }

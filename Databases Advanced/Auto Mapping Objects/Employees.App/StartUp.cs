@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Employees.App.Contracts;
-using Employees.App.Controlers;
 using Employees.Data;
 using Employees.Models;
 using Employees.Services;
@@ -27,11 +26,11 @@ namespace Employees.App
 
             serviceCollection.AddDbContext<EmployeesContext>(option => option.UseLazyLoadingProxies().UseSqlServer(Configuration.ConnectionString));
 
-            serviceCollection.AddTransient<IEmployeeControler, EmployeeControler>();
+            serviceCollection.AddTransient<IEmployeeService, EmployeeService>();
 
             serviceCollection.AddTransient<IDbInitializerService, DbInitializerService>();
 
-            serviceCollection.AddTransient<IManagerControler, ManagerControler>();
+            serviceCollection.AddTransient<IManagerService, ManagerService>();
 
             serviceCollection.AddTransient<ICommandInterpreter, CommandInterpreter>();
 

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XML Format", "XML Format\XML Format.csproj", "{9BB8C330-33BB-4E06-A4AA-B887BACA4CA5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop.Models", "ProductShop.Models\ProductShop.Models.csproj", "{585365D4-5088-4D66-A5CB-0C30640E04BC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop.Data", "ProductShop.Data\ProductShop.Data.csproj", "{43E9348F-0619-4BFC-A046-3392B695FD8D}"
@@ -27,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9BB8C330-33BB-4E06-A4AA-B887BACA4CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BB8C330-33BB-4E06-A4AA-B887BACA4CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BB8C330-33BB-4E06-A4AA-B887BACA4CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BB8C330-33BB-4E06-A4AA-B887BACA4CA5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{585365D4-5088-4D66-A5CB-0C30640E04BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{585365D4-5088-4D66-A5CB-0C30640E04BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{585365D4-5088-4D66-A5CB-0C30640E04BC}.Release|Any CPU.ActiveCfg = Release|Any CPU

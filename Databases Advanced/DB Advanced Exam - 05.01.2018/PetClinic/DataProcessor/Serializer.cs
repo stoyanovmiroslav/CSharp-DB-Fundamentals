@@ -13,7 +13,7 @@
         public static string ExportAnimalsByOwnerPhoneNumber(PetClinicContext context, string phoneNumber)
         {
             var animals = context.Animals.Where(x => x.Passport.OwnerPhoneNumber == phoneNumber)
-                                 .Select(x => new AnimalDto
+                                 .Select(x => new
                                  {
                                      AnimalName = x.Name,
                                      Age = x.Age,

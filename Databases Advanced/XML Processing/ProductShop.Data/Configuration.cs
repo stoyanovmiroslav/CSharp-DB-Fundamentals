@@ -6,6 +6,6 @@ namespace ProductShop.Data
 {
     public class Configuration
     {
-        public const string ConnectionString = "Server=.;Database=ProductShop;Trusted_Connection=True;";
+        public const string ConnectionString = @"Server=.;Database=ProductShop;Trusted_Connection=True;";
     }
 }

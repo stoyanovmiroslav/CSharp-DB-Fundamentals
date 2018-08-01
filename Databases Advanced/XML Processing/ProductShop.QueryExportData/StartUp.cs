@@ -35,24 +35,25 @@ namespace ProductShop.QueryExportData
 
         private static void UsersWithProducts(ProductShopContext context, XmlSerializerNamespaces xmlNamespaces)
         {
-            var users = context.Users.Where(x => x.ProductsBuyer.Count >= 1)
-                                          .Select(x => new UP_UserDto
-                                          {
-                                              FirstName = x.FirstName,
-                                              LastName = x.LastName,
-                                              Age = x.Age.ToString(),
-                                              SoldProducts = new UP_SoldProductDto
-                                              {
-                                                  Count = x.ProductsBuyer.Count,
-                                                  Product = x.ProductsBuyer.Select(p => new UP_ProductDto
-                                                  {
-                                                      Name = p.Name,
-                                                      Price = p.Price
-                                                  }).ToArray()
-                                              }
-                                          })
-                                          .OrderByDescending(x => x.SoldProducts.Count).ToArray();
-
+            var users = context.Users.Where(x => x.ProductsSold.Any(a => a.BuyerId != null))
+                               .Select(x => new UP_UserDto
+                               {
+                                   FirstName = x.FirstName,
+                                   LastName = x.LastName,
+                                   Age = x.Age.ToString(),
+                                   SoldProducts = new UP_SoldProductDto
+                                   {
+                                       Count = x.ProductsSold.Where(b => b.BuyerId != null).Count(),
+                                       Product = x.ProductsSold.Where(b => b.BuyerId != null)
+                                                    .Select(a => new UP_ProductDto
+                                                    {
+                                                        Name = a.Name,
+                                                        Price = a.Price
+                                                    }).ToArray()
+                                   }
+                               })
+                               .OrderByDescending(x => x.SoldProducts.Count)
+                               .ToArray();
 
             var usersProducts = new UP_UsersDto { Count = users.Count(), Users = users };
 
@@ -89,12 +90,12 @@ namespace ProductShop.QueryExportData
         private static void SoldProducts(ProductShopContext context, XmlSerializerNamespaces xmlNamespaces)
         {
             var users = context.Users
-                              .Where(x => x.ProductsBuyer.Count >= 1)
+                              .Where(x => x.ProductsBought.Count >= 1)
                               .Select(x => new SP_UserDto
                               {
                                   FirstName = x.FirstName,
                                   LastName = x.LastName,
-                                  SoldProducts = x.ProductsBuyer.Select(p => new SP_ProductDto
+                                  SoldProducts = x.ProductsBought.Select(p => new SP_ProductDto
                                   {
                                       Name = p.Name,
                                       Price = p.Price

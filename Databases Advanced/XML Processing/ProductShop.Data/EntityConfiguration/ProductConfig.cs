@@ -11,11 +11,11 @@ namespace ProductShop.Data.EntityConfiguration
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Product> builder)
         {
             builder.HasOne(x => x.Buyer)
-                   .WithMany(x => x.ProductsBuyer)
+                   .WithMany(x => x.ProductsBought)
                    .HasForeignKey(x => x.BuyerId);
 
             builder.HasOne(x => x.Seller)
-                   .WithMany(x => x.ProductsSeler)
+                   .WithMany(x => x.ProductsSold)
                    .HasForeignKey(x => x.SellerId);
         }
     }

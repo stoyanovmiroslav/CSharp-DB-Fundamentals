@@ -10,7 +10,7 @@
         // Configure your AutoMapper here if you wish to use it. If not, DO NOT DELETE THIS CLASS
         public PetClinicProfile()
         {
-            CreateMap<Vet, VetDto>().ReverseMap();
+            CreateMap<Models.Vet, VetDto>().ReverseMap();
             CreateMap<AnimalAid, DataProcessor.Dtos.Export.AnimalAidDto>().ReverseMap();
         }
     }

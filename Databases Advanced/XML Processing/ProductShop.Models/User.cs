@@ -17,8 +17,8 @@ namespace ProductShop.Models
 
         public int? Age { get; set; }
 
-        public ICollection<Product> ProductsBuyer { get; set; }
+        public ICollection<Product> ProductsBought { get; set; }
 
-        public ICollection<Product> ProductsSeler { get; set; }
+        public ICollection<Product> ProductsSold { get; set; }
     }
 }

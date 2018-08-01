@@ -31,7 +31,7 @@ namespace CarDealer.QueryExportData
             CarsWithTheirListOfParts(context, serializerNamespaces);
 
             //Query 5. Total Sales by Customer
-            TotalSalesБyCustomer(context, serializerNamespaces);
+            TotalSalesByCustomer(context, serializerNamespaces);
 
             //Query 6. Sales with Applied Discount
             SalesWithAppliedDiscount(context, serializerNamespaces);
@@ -62,7 +62,7 @@ namespace CarDealer.QueryExportData
             }
         }
 
-        private static void TotalSalesБyCustomer(CarDealerContext context, XmlSerializerNamespaces serializerNamespaces)
+        private static void TotalSalesByCustomer(CarDealerContext context, XmlSerializerNamespaces serializerNamespaces)
         {
             var customers = context.Customers.Where(x => x.Sales.Count >= 1)
                            .Select(x => new TC_CustomerDto

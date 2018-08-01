@@ -7,10 +7,12 @@
     using System.IO;
     using System.Linq;
     using System.Text;
+    using System.Xml;
     using System.Xml.Linq;
     using System.Xml.Serialization;
     using AutoMapper;
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Linq;
     using Newtonsoft.Json.Converters;
     using PetClinic.Data;
     using PetClinic.DataProcessor.Dtos.Import;
@@ -97,19 +99,20 @@
 
         public static string ImportVets(PetClinicContext context, string xmlString)
         {
+
             var serializer = new XmlSerializer(typeof(VetDto[]), new XmlRootAttribute("Vets"));
 
             var vetsDto = (VetDto[])serializer.Deserialize(new StringReader(xmlString));
 
             StringBuilder stringBuilder = new StringBuilder();
-            List<Vet> vets = new List<Vet>();
+            List<Models.Vet> vets = new List<Models.Vet>();
             List<string> phoneNumbers = new List<string>();
 
             foreach (var vetDto in vetsDto)
             {
                 if (IsValid(vetDto) && !phoneNumbers.Any(x => x == vetDto.PhoneNumber))
                 {
-                    var vet = Mapper.Map<Vet>(vetDto);
+                    var vet = Mapper.Map<Models.Vet>(vetDto);
                     vets.Add(vet);
                     phoneNumbers.Add(vet.PhoneNumber);
                     stringBuilder.AppendLine($"Record {vet.Name} successfully imported.");

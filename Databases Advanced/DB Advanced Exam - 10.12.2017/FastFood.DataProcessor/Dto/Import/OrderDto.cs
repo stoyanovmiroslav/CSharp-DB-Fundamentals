@@ -22,8 +22,7 @@ namespace FastFood.DataProcessor.Dto.Import
         [XmlElement("DateTime")]
         public string DateTime { get; set; }
 
-
-        [XmlElement("Type")]          //default: ForHere!!!!!!!
+        [XmlElement("Type")]
         public string Type { get; set; }
 
         [XmlArray("Items")]

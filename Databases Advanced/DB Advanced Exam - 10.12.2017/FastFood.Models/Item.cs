@@ -9,7 +9,7 @@ namespace FastFood.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(30, MinimumLength = 3)]  // Unique
+        [StringLength(30, MinimumLength = 3)]
         public string Name { get; set; }
 
         public int CategoryId { get; set; }

@@ -8,7 +8,7 @@ namespace FastFood.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]               // Unique !!!!!!!!!!!
+        [Required]
         [StringLength(30, MinimumLength = 3)]
         public string Name { get; set; }
 

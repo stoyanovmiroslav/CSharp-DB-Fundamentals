@@ -17,7 +17,7 @@ namespace FastFood.Models
         [Required]
         public DateTime DateTime { get; set; }
 
-        [Required]                      //default: ForHere!!!!!!!
+        [Required]
         public OrderType Type { get; set; }
 
         [Required]

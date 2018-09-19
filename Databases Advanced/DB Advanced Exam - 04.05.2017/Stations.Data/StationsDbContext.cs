@@ -5,7 +5,16 @@ namespace Stations.Data
 {
 	public class StationsDbContext : DbContext
 	{
-        public DbSet<CustomerCard> Cards { get; set; }
+        public StationsDbContext()
+		{
+		}
+
+		public StationsDbContext(DbContextOptions options)
+			: base(options)
+		{
+		}
+		
+	    public DbSet<CustomerCard> Cards { get; set; }
 
         public DbSet<SeatingClass> SeatingClasses { get; set; }
 
@@ -18,16 +27,6 @@ namespace Stations.Data
         public DbSet<TrainSeat> TrainSeats { get; set; }
 
         public DbSet<Trip> Trips { get; set; }
-
-
-        public StationsDbContext()
-		{
-		}
-
-		public StationsDbContext(DbContextOptions options)
-			: base(options)
-		{
-		}
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{

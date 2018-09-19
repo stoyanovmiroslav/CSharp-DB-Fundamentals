@@ -5,6 +5,15 @@ namespace Instagraph.Data
 {
     public class InstagraphContext : DbContext
     {
+		public InstagraphContext() 
+		{ 
+		}
+
+        public InstagraphContext(DbContextOptions options)
+            : base(options) 
+		{ 
+		}
+			
         public DbSet<Comment> Comments { get; set; }
 
         public DbSet<Picture> Pictures { get; set; }
@@ -16,11 +25,6 @@ namespace Instagraph.Data
         public DbSet<UserFollower> UserFollowers { get; set; }
 
         public DbSet<UserFollower> UsersFollowers { get; set; }
-
-        public InstagraphContext() { }
-
-        public InstagraphContext(DbContextOptions options)
-            : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

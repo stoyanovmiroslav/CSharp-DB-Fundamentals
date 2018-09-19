@@ -11,7 +11,9 @@ namespace PhotoShare.Data
 
     public class PhotoShareContext : DbContext
     { 
-        public PhotoShareContext() { }
+        public PhotoShareContext() 
+		{ 
+		}
 
 	    public PhotoShareContext(DbContextOptions options)
 		    : base(options)

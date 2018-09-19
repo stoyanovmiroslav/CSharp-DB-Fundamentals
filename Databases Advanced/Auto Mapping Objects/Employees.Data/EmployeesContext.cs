@@ -8,8 +8,6 @@ namespace Employees.Data
 {
     public class EmployeesContext : DbContext
     {
-        public DbSet<Employee> Employees { get; set; }
-
         public EmployeesContext()
         {
 
@@ -19,6 +17,9 @@ namespace Employees.Data
           : base(dbContextOptions)
         {
         }
+		
+		public DbSet<Employee> Employees { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

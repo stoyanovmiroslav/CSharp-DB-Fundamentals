@@ -5,13 +5,6 @@ namespace FastFood.Data
 {
     public class FastFoodDbContext : DbContext
     {
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Item> Items { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderItem> OrderItems { get; set; }
-        public DbSet<Position> Positions { get; set; }
-
         public FastFoodDbContext()
         {
         }
@@ -20,6 +13,13 @@ namespace FastFood.Data
             : base(options)
         {
         }
+		
+		public DbSet<Category> Categories { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
